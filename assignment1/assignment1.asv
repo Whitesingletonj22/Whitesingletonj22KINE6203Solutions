@@ -142,8 +142,6 @@ kgToOz = (originalWeightkg * 35.27)
 % as casting in computer programming). Use whos to check your result. 
 
 decimalNumber = 3.14
-convertedNumberInt = int32(decimalNumber)
-whos
 
 
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
