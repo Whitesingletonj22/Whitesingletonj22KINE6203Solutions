@@ -142,17 +142,23 @@ kgToOz = (originalWeightkg * 35.27)
 % as casting in computer programming). Use whos to check your result. 
 
 decimalNumber = 3.14
+convertedNumberInt = int32(decimalNumber)
+whos
 
 
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
 % kilograms using an appropriate calculation or function and assign the result to a variable weightInKgs.
 
-
+weightInLBs = 10
+weightInKgs = weightInLBs*0.453592
 
 
 % 18. Create a variable fTemp to store a temperature in degrees Fahrenheit (F). 
 % Convert this to degrees Celsius (C) using an appropriate 
 % calculation and store the result in a variable cTemp.
+
+fTemp = 55
+cTemp = ((fTemp)-32)*1.8
 
 
 
@@ -162,8 +168,8 @@ decimalNumber = 3.14
 % 1.1000 1.3000 1.5000 1.7000 
 % 8 6 4 2
 % Store your results with variable names vecA, vecB and vecC respectively.
-
-
+vecA = 2:7
+vecB = 1.1000=.2:1.7000
 
 
 % 20. Give a MATLAB expression that would create a vector 
@@ -243,7 +249,7 @@ decimalNumber = 3.14
 %%% Enter the code for your program below this line
 
 
-
+disp('Hello World')
 
 
 

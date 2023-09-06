@@ -101,7 +101,7 @@ S = sum(A, 'omitnan')
 % could play a similar game on Matlab? Write the command that would launch
 % the game if so. 
 
-
+xpbombs
 
 
 % 12. Create a variable myAge and assign it the value of your age. Then 
@@ -149,12 +149,16 @@ whos
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
 % kilograms using an appropriate calculation or function and assign the result to a variable weightInKgs.
 
-
+weightInLBs = 10
+weightInKgs = weightInLBs*0.453592
 
 
 % 18. Create a variable fTemp to store a temperature in degrees Fahrenheit (F). 
 % Convert this to degrees Celsius (C) using an appropriate 
 % calculation and store the result in a variable cTemp.
+
+fTemp = 55
+cTemp = ((fTemp)-32)*1.8
 
 
 
@@ -164,22 +168,23 @@ whos
 % 1.1000 1.3000 1.5000 1.7000 
 % 8 6 4 2
 % Store your results with variable names vecA, vecB and vecC respectively.
-
-
+vecA = 2:7
+vecB = 1.1000:+.2:1.7000
+vecC = 8:-2:2
 
 
 % 20. Give a MATLAB expression that would create a vector 
 % (assigned to a variable called vec) of 50 elements that range, equally spaced, 
 % from 0 to 2pi. 
 
-
+vec = linspace(0, 2*pi, 50)
 
 
 % 21. Using the colon operator and the transpose operator, 
 % create a column vector that has the values -1 to 1 in steps of 0.5.
 % Assign your answer to a variable called colVec.
 
-
+colVec = (-1:0.5:1)'
 
 
 % 22. Create a variable called rows that is a random integer in the inclusive range 
@@ -188,34 +193,49 @@ whos
 % dimensions given by the values of rows and cols. The resultMat should
 % change each time you execute your code. 
 
+rows = randi([1, 5]);
+cols = randi([1, 5]);
 
+resultMat = zeros(rows, cols)
 
+fprintf('Random number of rows: %d\n', rows);
+fprintf('Random number of columns: %d\n', cols);
+
+disp('Matrix resultMat:');
+disp(resultMat);
 
 % 23. Create a vector of five random integers, each in the inclusive range 
 % from -10 to 10 assigned to a variable named originalVec. Perform each of 
 % the following on the original vector and store your results in appropriately 
 % named variables. (you should have a seperate line of code for each)
 
-% - subtract 3 from each element
+originalVec = randi([-10, 10], 1, 5)
 
+% - subtract 3 from each element
+subtractVec = originalVec - 3
 
 % - count how many are positive
-
+positiveCount = sum(originalVec > 0)
 
 % - get the absolute value of each element
-
+absResultVec = abs(originalVec)
 
 
 % - find the maximum.
 
-
+maxValue = max(originalVec)
 
 % 24. Write some code that will calculate the area of a trapezoid. Create
 % variables for base1, base2, and height and assign them values. Store the
 % result of your calculation in a variable called trapArea. Comment your
 % code so that another user can understand what your code does. 
 
+base1 = 5; % Length of the first base
+base2 = 7; % Length of the second base
+height = 4; % Height of the trapezoid
 
+% Use the following formula to calculate the area of the trapezoid.
+trapArea = 0.5 * (base1 + base2) * height
 
 
 
@@ -229,9 +249,10 @@ whos
 % costs and then calculates the ROI and stores the value in a variable called
 % ROI.
 
+totalRevenues = input('Enter total revenues:')
+totalCosts = input('Enter total costs:')
 
-
-
+ROI = ((totalRevenues - totalCosts) / totalCosts) * 100
 
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%  Part 2: Hello World %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -245,7 +266,7 @@ whos
 %%% Enter the code for your program below this line
 
 
-
+disp('Hello World')
 
 
 
