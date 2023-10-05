@@ -31,7 +31,7 @@ function playTicTacToe(currentPlayer)
         
         %disp(currentPlayer, '''s turn!');
         
-        if strcmp(currentPlayer, 'You')
+        if strcmp(currentPlayer, 'You') % I was unaware of the strcmp command and had to use a mixture of google searches and the chatGPT engine to determine how to get this section to work correctly.
             disp('Select a spot (1-9): ')
             spot = input('', 's');
             [row, col] = getSpotLocation(str2double(spot));
@@ -53,11 +53,11 @@ function playTicTacToe(currentPlayer)
             disp(col)
             board(row, col) = 'O';
             %availableSpots(availableSpots == spot) = [];
-            availableSpots = setdiff(availableSpots, spot);
+            availableSpots = setdiff(availableSpots, spot); % setdiff was a command that I was not aware of its function till Professor Rider showed me how it worked.  I now understand that it takens the choices inputs out of the available selctions of a given number set.
         end
         
         % Check for a win or a draw
-        result = checkWin(board);
+        result = checkWin(board);  % Pulls in the checkWin function to determine if there is a legal win based on play or computer inputs.
         if result == 1
             displayGameBoard(board);
             disp(['Congratulations! ', currentPlayer, ' win.'])
