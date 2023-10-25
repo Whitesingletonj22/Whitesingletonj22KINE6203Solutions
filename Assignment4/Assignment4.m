@@ -35,10 +35,12 @@
 % The following code calls the function dayComparer.  This will pull the data from the imported file and show a number of times 
 % a subject had an increase from day 1 to day 2, and from day 2 to day 3.  
 % I attempted to have it show the Subject ID of the individual subjects who had increases 
-% but i could not get it to work so I had to abandon that feature.
+% but i could not get it to work so I had it print in the command window below instead of the CSV file.
 [day1Day2Change] = dayComparer(SubjectID, Day1, Day2); 
 [day2Day3Change] = dayComparer(SubjectID, Day2, Day3); 
 
+fprintf('Subjects with an increase from day 1 to day 2: %s\n', mat2str(day1Day2Change));
+fprintf('Subjects with an increase from day 2 to day 3: %s\n', mat2str(day2Day3Change));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 %    This section actually gave me a problem writing it as I had originally

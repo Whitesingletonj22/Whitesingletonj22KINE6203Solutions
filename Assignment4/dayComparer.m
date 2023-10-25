@@ -9,8 +9,11 @@
 
 function [subjectDayHigh] = dayComparer(SubjectID, Day1Compared, Day2Compared)
 
-subjectDayHigh = find(Day2Compared > Day1Compared);
-
+increasedDayHigh = find(Day2Compared > Day1Compared);
+subjectDayHigh = SubjectID(increasedDayHigh)
 
 end
 
+
+%  Originally I had attempted to use a lot of "if" statements and it was so
+%  convoluted.  I was able to find a more logic based approach
