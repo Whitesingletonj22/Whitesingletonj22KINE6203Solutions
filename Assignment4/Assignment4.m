@@ -12,9 +12,7 @@
 %   many subjects saw an increase in their personal strength training data.
 
 
-% 3. Call the function importfile and give it a name ('isok_data_6803.csv')
-% then type [SubjectID, Age, Gender, Weight, Day1, Day2, Day3] = importfile('isok_data_6803.csv'))
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  The first piece of code in my main file calls the imported file
 %  (isok_data_6803.csv) and allows the program to have access to the data.
@@ -25,7 +23,6 @@
 [SubjectID, Age, Gender, Weight, Day1, Day2, Day3] = importfile('isok_data_6803.csv');
 
 
-% 4. Create a function (name it genderIsoCalc.m)
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  This calls the function labeled genderIsoCalc.  More information on its
@@ -33,8 +30,7 @@
 [maleIsoIndMeans, femaleIsoIndMeans, maleGroupIsoMean, femaleGroupIsoMean] = genderIsoCalc(Day1, Day2, Day3, Gender); 
 
 
-% 5. Create a function (name it dayComparer.m) 
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The following code calls the function dayComparer.  This will pull the data from the imported file and show a number of times 
 % a subject had an increase from day 1 to day 2, and from day 2 to day 3.  
@@ -43,10 +39,7 @@
 [day1Day2Change] = dayComparer(SubjectID, Day1, Day2); 
 [day2Day3Change] = dayComparer(SubjectID, Day2, Day3); 
 
-% 6. Weight normalize the isokinetic data and calculate the group means 
-%    for each day. 
-%    Store these values with the names normDay1mean, normDay2mean, normDay3mean. 
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 %    This section actually gave me a problem writing it as I had originally
 %    used a much longer method of writinging the math out, then I
@@ -78,12 +71,11 @@ normDay2mean(13,1) = NaN;
 normDay3mean(13,1) = NaN; 
 
 
-%  7. Export results to a csvfile using an appropriate built-in function. 
-%   Name the file iso_results.csv. (You do not need to submit this file 
-%    because your script should create this file when I run your code.)
+% This final piece will generate a table, and save the file in a excel readable format for easy
+% access
+
 results = table(maleIsoIndMeans,femaleIsoIndMeans,maleGroupIsoMean,femaleGroupIsoMean,day1Day2Change,day2Day3Change,normDay1mean,normDay2mean,normDay3mean);
 
 writetable(results,'iso_results.csv');
-% This final piece will save the file in a excel readable format for easy
-% access.
+
 
