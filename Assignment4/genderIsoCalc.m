@@ -4,6 +4,7 @@ function [maleIsoIndMeans, femaleIsoIndMeans, maleGroupIsoMean, femaleGroupIsoMe
 maleIsokData = Gender == 'M';
 femaleIsokData = Gender == 'F'; 
 
+
 % The next set of code will provide the averages for the daily data for the
 % individual subjects from the data sheet.   Once again identifying gender
 % from the datasheet above allows the program to correctly place the

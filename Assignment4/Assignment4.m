@@ -78,7 +78,7 @@ normDay2mean(13,1) = NaN;
 normDay3mean(13,1) = NaN; 
 
 
-%7. Export results to a csvfile using an appropriate built-in function. 
+%  7. Export results to a csvfile using an appropriate built-in function. 
 %   Name the file iso_results.csv. (You do not need to submit this file 
 %    because your script should create this file when I run your code.)
 results = table(maleIsoIndMeans,femaleIsoIndMeans,maleGroupIsoMean,femaleGroupIsoMean,day1Day2Change,day2Day3Change,normDay1mean,normDay2mean,normDay3mean);
