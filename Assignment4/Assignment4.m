@@ -1,5 +1,5 @@
-%% This program is designed to process data from an imported file.
-%% To run this program simply type "Assignment4" into the command window.
+% This program is designed to process data from an imported file.
+% To run this program simply type "Assignment4" into the command window.
 
 
 %  John White-Singleton
