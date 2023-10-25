@@ -74,6 +74,7 @@ userGuess = 0;
 
 while userGuess ~= secretNumber
 
+
 % get a valid guess (an integer from 1-Highest) from the user
 
 fprintf('\nEnter a guess (1-%d): ', highest);
@@ -94,7 +95,7 @@ numOfTries = numOfTries + 1;
 
 if userGuess > secretNumber
 fprintf('Sorry, %d is too low.\n', userGuess);
-elseif userGuess > secretNumber 
+elseif userGuess < secretNumber 
 fprintf('Sorry, %d is too high.\n', userGuess);
 elseif numOfTries == 1
 fprintf('\nLucky You!  You got it on your first try!\n\n');
@@ -106,5 +107,7 @@ secretNumber);
 fprintf('Game Over. Thanks for playing the Guess That Number game.\n\n');
 
 end  % of guessing while loop
+
+end % Bug fixwd by addeding the missing 'end' for the while loop
 
 % end of game
